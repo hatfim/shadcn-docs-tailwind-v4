@@ -1,13 +1,12 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import tailwindcss from '@tailwindcss/vite';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/tailwindcss',
-    'shadcn-nuxt',
     '@vueuse/nuxt',
     '@nuxt/content',
     '@nuxt/image',
@@ -32,7 +31,7 @@ export default defineNuxtConfig({
     disableTransition: true,
   },
   css: [
-    join(currentDir, './assets/css/themes.css'),
+    join(currentDir, './assets/css/main.css'),
   ],
   content: {
     documentDriven: true,
@@ -80,4 +79,7 @@ export default defineNuxtConfig({
     transpile: ['shiki'],
   },
   compatibilityDate: '2024-07-05',
+  vite: {
+    plugins: [ tailwindcss() ]
+  }
 });
