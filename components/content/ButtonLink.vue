@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonVariants } from '../ui/button';
+import type { ButtonVariants } from '../sh/button';
 
 defineProps<{
   variant?: ButtonVariants['variant'];

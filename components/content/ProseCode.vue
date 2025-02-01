@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import type { BuiltinLanguage } from 'shiki';
-import ScrollBar from '../ui/scroll-area/ScrollBar.vue';
+import ScrollBar from '../sh/scroll-area/ScrollBar.vue';
 
 const {
   code = '',

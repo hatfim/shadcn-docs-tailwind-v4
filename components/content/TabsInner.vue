@@ -178,7 +178,7 @@
 
 <script setup lang="ts">
 import { cn } from '@/lib/utils';
-import ScrollBar from '../ui/scroll-area/ScrollBar.vue';
+import ScrollBar from '../sh/scroll-area/ScrollBar.vue';
 
 const { sync, slotsData } = defineProps<{
   slotsData: { label: string; index: number }[];
