@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import type { ScrollAreaRootProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import {
   ScrollAreaCorner,
   ScrollAreaRoot,

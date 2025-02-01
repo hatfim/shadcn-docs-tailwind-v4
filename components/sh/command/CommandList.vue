@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import type { ComboboxContentEmits, ComboboxContentProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { ComboboxContent, useForwardPropsEmits } from 'radix-vue';
 import { computed } from 'vue';
 

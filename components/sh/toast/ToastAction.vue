@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import type { ToastActionProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { ToastAction } from 'radix-vue';
 import { computed } from 'vue';
 

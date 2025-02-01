@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue';
 import type { AvatarVariants } from '.';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { AvatarRoot } from 'radix-vue';
 import { avatarVariant } from '.';
 

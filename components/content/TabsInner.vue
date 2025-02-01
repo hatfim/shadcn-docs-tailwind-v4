@@ -177,7 +177,7 @@
 </template>
 
 <script setup lang="ts">
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import ScrollBar from '../sh/scroll-area/ScrollBar.vue';
 
 const { sync, slotsData } = defineProps<{

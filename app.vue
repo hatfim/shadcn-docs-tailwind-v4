@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import Toaster from '~/components/sh/toast/Toaster.vue';
+import Toaster from '@DOCS/components/sh/toast/Toaster.vue';
 
 const { page } = useContent();
 const config = useConfig();

@@ -14,12 +14,11 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-og-image',
   ],
-  // shadcn: {
-  //   prefix: 'Ui',
-  //   componentDir: join(currentDir, './components/ui'),
-  // },
   routeRules: {
     '/': { prerender: true },
+  },
+  alias: {
+    "@DOCS": fileURLToPath(new URL("./", import.meta.url)),
   },
   components: {
     dirs: [

@@ -12,7 +12,7 @@
 import type { PrimitiveProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
 import type { ButtonVariants } from '.';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { Primitive } from 'radix-vue';
 import { buttonVariants } from '.';
 

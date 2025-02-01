@@ -144,7 +144,7 @@ badges:
       ::
       ::div{label="Code"}
         ```tsx
-        import { Badge } from "@/components/ui/badge"
+        import { Badge } from "@DOCS/components/ui/badge"
 
         export function BadgeDemo() {
           return <Badge>Badge</Badge>
@@ -160,7 +160,7 @@ badges:
     ::
     ::div{label="Code"}
       ```tsx
-      import { Badge } from "@/components/ui/badge"
+      import { Badge } from "@DOCS/components/ui/badge"
 
       export function BadgeDemo() {
         return <Badge>Badge</Badge>

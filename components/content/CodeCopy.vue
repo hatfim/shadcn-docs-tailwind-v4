@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { useToast } from '~/components/sh/toast/use-toast';
+import { useToast } from '@DOCS/components/sh/toast/use-toast';
 
 const { code } = defineProps<{
   code: string;

@@ -77,7 +77,7 @@
 </template>
 
 <script setup lang="ts">
-import { themes } from '@/lib/registry/themes';
+import { themes } from '@DOCS/lib/registry/themes';
 
 const { themeClass, theme, radius, setTheme, setRadius } = useThemes();
 const { darkModeToggle } = useConfig().value.header;

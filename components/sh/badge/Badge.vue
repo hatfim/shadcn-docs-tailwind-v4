@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue';
 import type { BadgeVariants } from '.';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { badgeVariants } from '.';
 
 const props = defineProps<{

@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import type { SeparatorProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { Separator } from 'radix-vue';
 import { computed } from 'vue';
 

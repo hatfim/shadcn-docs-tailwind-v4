@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import type { ComboboxGroupProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { className } from '@/lib/utils';
+import { className } from '@DOCS/lib/utils';
 import { ComboboxGroup, ComboboxLabel } from 'radix-vue';
 import { computed } from 'vue';
 
