@@ -1,5 +1,5 @@
 <template>
-  <ComboboxContent v-bind="forwarded" :class="cn('overflow-y-auto overflow-x-hidden', props.class)">
+  <ComboboxContent v-bind="forwarded" :class="className('overflow-y-auto overflow-x-hidden', props.class)">
     <div role="presentation">
       <slot />
     </div>
@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import type { ComboboxContentEmits, ComboboxContentProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { ComboboxContent, useForwardPropsEmits } from 'radix-vue';
 import { computed } from 'vue';
 

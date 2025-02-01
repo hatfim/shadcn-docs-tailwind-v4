@@ -1,5 +1,5 @@
 <template>
-  <ToastTitle v-bind="delegatedProps" :class="cn('text-sm font-semibold [&+div]:text-xs', props.class)">
+  <ToastTitle v-bind="delegatedProps" :class="className('text-sm font-semibold [&+div]:text-xs', props.class)">
     <slot />
   </ToastTitle>
 </template>
@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import type { ToastTitleProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { ToastTitle } from 'radix-vue';
 import { computed } from 'vue';
 

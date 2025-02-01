@@ -1,6 +1,6 @@
 <template>
   <TabsContent
-    :class="cn('mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2', props.class)"
+    :class="className('mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2', props.class)"
     v-bind="delegatedProps"
   >
     <slot />
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import type { TabsContentProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { TabsContent } from 'radix-vue';
 import { computed } from 'vue';
 

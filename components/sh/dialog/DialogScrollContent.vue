@@ -5,7 +5,7 @@
     >
       <DialogContent
         :class="
-          cn(
+          className(
             'relative z-50 grid w-full max-w-lg my-8 gap-4 border border-border bg-background p-6 shadow-lg duration-200 sm:rounded-lg md:w-full',
             props.class,
           )
@@ -35,7 +35,7 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import {
   DialogClose,
   DialogContent,

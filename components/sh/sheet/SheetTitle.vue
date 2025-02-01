@@ -1,6 +1,6 @@
 <template>
   <DialogTitle
-    :class="cn('text-lg font-semibold text-foreground', props.class)"
+    :class="className('text-lg font-semibold text-foreground', props.class)"
     v-bind="delegatedProps"
   >
     <slot />
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import type { DialogTitleProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { DialogTitle } from 'radix-vue';
 import { computed } from 'vue';
 

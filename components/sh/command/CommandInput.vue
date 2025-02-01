@@ -5,7 +5,7 @@
     <ComboboxInput
       v-bind="{ ...forwardedProps, ...$attrs }"
       auto-focus
-      :class="cn('flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50', props.class)"
+      :class="className('flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50', props.class)"
     />
   </div>
 </template>
@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import type { ComboboxInputProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { ComboboxInput, useForwardProps } from 'radix-vue';
 import { computed } from 'vue';
 

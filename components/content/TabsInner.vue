@@ -152,7 +152,7 @@
                 {{ label(slot.props) }}
                 <Icon
                   name="lucide:check"
-                  :class="cn(
+                  :class="className(
                     'ml-auto h-4 w-4',
                     activeTabIndex === i ? 'opacity-100' : 'opacity-0',
                   )"
@@ -177,7 +177,7 @@
 </template>
 
 <script setup lang="ts">
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import ScrollBar from '../sh/scroll-area/ScrollBar.vue';
 
 const { sync, slotsData } = defineProps<{

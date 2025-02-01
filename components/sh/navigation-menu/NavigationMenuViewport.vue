@@ -3,7 +3,7 @@
     <NavigationMenuViewport
       v-bind="forwardedProps"
       :class="
-        cn(
+        className(
           'origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] overflow-hidden w-full rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
           props.class,
         )
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import type { NavigationMenuViewportProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import {
   NavigationMenuViewport,
 

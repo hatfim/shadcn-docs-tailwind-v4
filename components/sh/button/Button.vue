@@ -2,7 +2,7 @@
   <Primitive
     :as="as"
     :as-child="asChild"
-    :class="cn(buttonVariants({ variant, size }), props.class)"
+    :class="className(buttonVariants({ variant, size }), props.class)"
   >
     <slot />
   </Primitive>
@@ -12,7 +12,7 @@
 import type { PrimitiveProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
 import type { ButtonVariants } from '.';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { Primitive } from 'radix-vue';
 import { buttonVariants } from '.';
 

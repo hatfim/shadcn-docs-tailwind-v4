@@ -1,5 +1,5 @@
 <template>
-  <ScrollAreaRoot v-bind="delegatedProps" :class="cn('relative overflow-hidden', props.class)">
+  <ScrollAreaRoot v-bind="delegatedProps" :class="className('relative overflow-hidden', props.class)">
     <ScrollAreaViewport class="size-full rounded-[inherit]">
       <slot />
     </ScrollAreaViewport>
@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import type { ScrollAreaRootProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import {
   ScrollAreaCorner,
   ScrollAreaRoot,

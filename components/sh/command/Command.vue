@@ -1,7 +1,7 @@
 <template>
   <ComboboxRoot
     v-bind="forwarded"
-    :class="cn('flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground', props.class)"
+    :class="className('flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground', props.class)"
   >
     <slot />
   </ComboboxRoot>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import type { ComboboxRootEmits, ComboboxRootProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { ComboboxRoot, useForwardPropsEmits } from 'radix-vue';
 import { computed } from 'vue';
 

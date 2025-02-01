@@ -1,14 +1,14 @@
 <template>
   <Separator
     v-bind="delegatedProps"
-    :class="cn('shrink-0 bg-border', props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full', props.class)"
+    :class="className('shrink-0 bg-border', props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full', props.class)"
   />
 </template>
 
 <script setup lang="ts">
 import type { SeparatorProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { Separator } from 'radix-vue';
 import { computed } from 'vue';
 

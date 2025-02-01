@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn(alertVariants({ variant }), props.class)" role="alert">
+  <div :class="className(alertVariants({ variant }), props.class)" role="alert">
     <slot />
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue';
 import type { AlertVariants } from '.';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { alertVariants } from '.';
 
 const props = defineProps<{

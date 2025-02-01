@@ -2,7 +2,7 @@
   <ScrollAreaScrollbar
     v-bind="delegatedProps"
     :class="
-      cn('flex touch-none select-none transition-colors',
+      className('flex touch-none select-none transition-colors',
          orientation === 'vertical'
            && 'h-full w-2.5 border-l border-l-transparent p-px',
          orientation === 'horizontal'
@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import type { ScrollAreaScrollbarProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { ScrollAreaScrollbar, ScrollAreaThumb } from 'radix-vue';
 import { computed } from 'vue';
 

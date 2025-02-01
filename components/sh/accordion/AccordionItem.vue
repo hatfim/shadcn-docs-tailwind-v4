@@ -1,7 +1,7 @@
 <template>
   <AccordionItem
     v-bind="forwardedProps"
-    :class="cn('border-b', props.class)"
+    :class="className('border-b', props.class)"
   >
     <slot />
   </AccordionItem>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import type { AccordionItemProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { AccordionItem, useForwardProps } from 'radix-vue';
 import { computed } from 'vue';
 

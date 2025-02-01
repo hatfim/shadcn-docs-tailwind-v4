@@ -3,7 +3,7 @@
     <AccordionTrigger
       v-bind="delegatedProps"
       :class="
-        cn(
+        className(
           'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
           props.class,
         )
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import type { AccordionTriggerProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import {
   AccordionHeader,
   AccordionTrigger,

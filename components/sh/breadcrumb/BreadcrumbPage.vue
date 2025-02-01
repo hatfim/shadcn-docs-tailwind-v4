@@ -3,7 +3,7 @@
     role="link"
     aria-disabled="true"
     aria-current="page"
-    :class="cn('font-normal text-foreground', props.class)"
+    :class="className('font-normal text-foreground', props.class)"
   >
     <slot />
   </span>
@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 
 const props = defineProps<{
   class?: HTMLAttributes['class'];

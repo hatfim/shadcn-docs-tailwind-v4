@@ -1,7 +1,7 @@
 <template>
   <DialogDescription
     v-bind="forwardedProps"
-    :class="cn('text-sm text-muted-foreground', props.class)"
+    :class="className('text-sm text-muted-foreground', props.class)"
   >
     <slot />
   </DialogDescription>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import type { DialogDescriptionProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { DialogDescription, useForwardProps } from 'radix-vue';
 import { computed } from 'vue';
 

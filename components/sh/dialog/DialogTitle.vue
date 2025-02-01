@@ -2,7 +2,7 @@
   <DialogTitle
     v-bind="forwardedProps"
     :class="
-      cn(
+      className(
         'text-lg font-semibold leading-none tracking-tight',
         props.class,
       )
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import type { DialogTitleProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { DialogTitle, useForwardProps } from 'radix-vue';
 import { computed } from 'vue';
 

@@ -2,7 +2,7 @@
   <Primitive
     :as="as"
     :as-child="asChild"
-    :class="cn('transition-colors hover:text-foreground', props.class)"
+    :class="className('transition-colors hover:text-foreground', props.class)"
   >
     <slot />
   </Primitive>
@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import type { PrimitiveProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { Primitive } from 'radix-vue';
 
 const props = withDefaults(defineProps<PrimitiveProps & { class?: HTMLAttributes['class'] }>(), {

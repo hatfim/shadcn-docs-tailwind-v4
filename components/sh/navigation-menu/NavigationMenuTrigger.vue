@@ -1,7 +1,7 @@
 <template>
   <NavigationMenuTrigger
     v-bind="forwardedProps"
-    :class="cn(navigationMenuTriggerStyle(), 'group', props.class)"
+    :class="className(navigationMenuTriggerStyle(), 'group', props.class)"
   >
     <slot />
     <Icon
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import type { NavigationMenuTriggerProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import {
   NavigationMenuTrigger,
 

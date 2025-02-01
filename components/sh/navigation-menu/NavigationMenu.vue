@@ -1,7 +1,7 @@
 <template>
   <NavigationMenuRoot
     v-bind="forwarded"
-    :class="cn('relative z-10 flex max-w-max flex-1 items-center justify-center', props.class)"
+    :class="className('relative z-10 flex max-w-max flex-1 items-center justify-center', props.class)"
   >
     <slot />
     <NavigationMenuViewport />
@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import type { NavigationMenuRootEmits, NavigationMenuRootProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import {
   NavigationMenuRoot,
 

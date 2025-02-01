@@ -1,7 +1,7 @@
 <template>
   <ComboboxItem
     v-bind="forwarded"
-    :class="cn('relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-accent data-[disabled]:pointer-events-none data-[disabled]:opacity-50', props.class)"
+    :class="className('relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-accent data-[disabled]:pointer-events-none data-[disabled]:opacity-50', props.class)"
   >
     <slot />
   </ComboboxItem>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import type { ComboboxItemEmits, ComboboxItemProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { ComboboxItem, useForwardPropsEmits } from 'radix-vue';
 import { computed } from 'vue';
 

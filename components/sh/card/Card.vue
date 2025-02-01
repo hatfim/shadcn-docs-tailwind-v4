@@ -1,7 +1,7 @@
 <template>
   <div
     :class="
-      cn(
+      className(
         'rounded-lg border bg-card text-card-foreground shadow-sm',
         props.class,
       )
@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 
 const props = defineProps<{
   class?: HTMLAttributes['class'];

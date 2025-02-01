@@ -3,7 +3,7 @@
     v-bind="delegatedProps"
     class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
   >
-    <div :class="cn('pb-4 pt-0', props.class)">
+    <div :class="className('pb-4 pt-0', props.class)">
       <slot />
     </div>
   </AccordionContent>
@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import type { AccordionContentProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { AccordionContent } from 'radix-vue';
 import { computed } from 'vue';
 

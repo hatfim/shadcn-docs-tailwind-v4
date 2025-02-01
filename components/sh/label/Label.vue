@@ -2,7 +2,7 @@
   <Label
     v-bind="delegatedProps"
     :class="
-      cn(
+      className(
         'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
         props.class,
       )
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import type { LabelProps } from 'radix-vue';
 import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import { className } from '@/lib/utils';
 import { Label } from 'radix-vue';
 import { computed } from 'vue';
 
