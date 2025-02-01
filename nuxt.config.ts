@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     disableTransition: true,
   },
   css: [
-    join(currentDir, './styles/css/main.css'),
+    join(currentDir, './assets/css/main.css'),
   ],
   content: {
     documentDriven: true,
