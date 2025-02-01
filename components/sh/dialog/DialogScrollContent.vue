@@ -22,7 +22,7 @@
         <slot />
 
         <DialogClose
-          class="absolute right-3 top-3 rounded-md p-0.5 transition-colors hover:bg-secondary"
+          class="absolute right-3 top-3 rounded-md p-0.5 transition-colors hover:bg-subtle"
         >
           <Icon name="lucide:x" class="block size-4" />
           <span class="sr-only">Close</span>

@@ -13,7 +13,7 @@
             {{ title }}
           </div>
         </div>
-        <div class="flex gap-3 text-secondary-foreground" :class="{ 'mx-auto': center }">
+        <div class="flex gap-3 text-subtle-foreground" :class="{ 'mx-auto': center }">
           <NuxtLink v-for="link in links" :key="link.to" :to="link.to" :target="link.target">
             <SmartIcon :name="link.icon" />
           </NuxtLink>
