@@ -1,6 +1,6 @@
 <template>
   <NuxtLink v-if="to" :to :target class="mx-0.5">
-    <UiBadge
+    <ShBadge
       :variant
       :class="[
         typeTwClass[type],
@@ -8,11 +8,11 @@
       ]"
     >
       <ContentSlot unwrap="p" />
-    </UiBadge>
+    </ShBadge>
   </NuxtLink>
 
   <span v-else class="mx-0.5">
-    <UiBadge
+    <ShBadge
       :variant
       :class="[
         typeTwClass[type],
@@ -20,7 +20,7 @@
       ]"
     >
       <ContentSlot unwrap="p" />
-    </UiBadge>
+    </ShBadge>
   </span>
 </template>
 

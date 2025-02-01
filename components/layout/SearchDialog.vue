@@ -1,48 +1,48 @@
 <template>
-  <UiDialog v-model:open="open">
-    <UiDialogContent class="p-0">
+  <ShDialog v-model:open="open">
+    <ShDialogContent class="p-0">
       <VisuallyHidden as-child>
-        <UiDialogTitle />
+        <ShDialogTitle />
       </VisuallyHidden>
       <VisuallyHidden as-child>
-        <UiDialogDescription aria-describedby="undefined" />
+        <ShDialogDescription aria-describedby="undefined" />
       </VisuallyHidden>
-      <UiCommand v-model:search-term="input" class="h-svh sm:h-[350px]">
-        <UiCommandInput
+      <ShCommand v-model:search-term="input" class="h-svh sm:h-[350px]">
+        <ShCommandInput
           :loading="searchLoading"
           :placeholder="placeholderDetailed"
           @keydown.enter="handleEnter"
           @keydown.down="handleNavigate(1)"
           @keydown.up="handleNavigate(-1)"
         />
-        <UiCommandList class="text-sm" @escape-key-down="open = false">
+        <ShCommandList class="text-sm" @escape-key-down="open = false">
           <template v-if="!input?.length">
             <template v-for="item in navigation" :key="item._path">
-              <UiCommandGroup v-if="item.children" :heading="item.title" class="p-1.5">
+              <ShCommandGroup v-if="item.children" :heading="item.title" class="p-1.5">
                 <NuxtLink v-for="child in item.children" :key="child.id" :to="child._path">
-                  <UiCommandItem :value="child._path">
+                  <ShCommandItem :value="child._path">
                     <SmartIcon v-if="child.icon" :name="child.icon" class="mr-2 size-4" />
                     <div v-else class="mr-2 size-4" />
                     <span>{{ child.title }}</span>
-                  </UiCommandItem>
+                  </ShCommandItem>
                 </NuxtLink>
-              </UiCommandGroup>
-              <UiCommandSeparator v-if="item.children" />
+              </ShCommandGroup>
+              <ShCommandSeparator v-if="item.children" />
             </template>
-            <UiCommandGroup v-if="darkModeToggle" heading="Theme" class="p-1.5">
-              <UiCommandItem value="light" @click="colorMode.preference = 'light'">
+            <ShCommandGroup v-if="darkModeToggle" heading="Theme" class="p-1.5">
+              <ShCommandItem value="light" @click="colorMode.preference = 'light'">
                 <Icon name="lucide:sun" class="mr-2 size-4" />
                 <span>Light</span>
-              </UiCommandItem>
-              <UiCommandItem value="dark" @click="colorMode.preference = 'dark'">
+              </ShCommandItem>
+              <ShCommandItem value="dark" @click="colorMode.preference = 'dark'">
                 <Icon name="lucide:moon" class="mr-2 size-4" />
                 <span>Dark</span>
-              </UiCommandItem>
-              <UiCommandItem value="system" @click="colorMode.preference = 'auto'">
+              </ShCommandItem>
+              <ShCommandItem value="system" @click="colorMode.preference = 'auto'">
                 <Icon name="lucide:monitor" class="mr-2 size-4" />
                 <span>System</span>
-              </UiCommandItem>
-            </UiCommandGroup>
+              </ShCommandItem>
+            </ShCommandGroup>
           </template>
 
           <div v-else-if="searchResult?.length" class="p-1.5">
@@ -72,10 +72,10 @@
           <div v-else class="pt-4 text-center text-muted-foreground">
             No results found.
           </div>
-        </UiCommandList>
-      </UiCommand>
-    </UiDialogContent>
-  </UiDialog>
+        </ShCommandList>
+      </ShCommand>
+    </ShDialogContent>
+  </ShDialog>
 </template>
 
 <script setup lang="ts">

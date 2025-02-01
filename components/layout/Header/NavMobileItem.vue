@@ -1,7 +1,7 @@
 <template>
   <template v-if="item.links">
-    <UiCollapsible v-model:open="isOpen">
-      <UiCollapsibleTrigger class="w-full p-2 text-left">
+    <ShCollapsible v-model:open="isOpen">
+      <ShCollapsibleTrigger class="w-full p-2 text-left">
         <div class="flex w-full gap-1">
           {{ item.title }}
           <Icon
@@ -10,8 +10,8 @@
             class="ml-auto self-center"
           />
         </div>
-      </UiCollapsibleTrigger>
-      <UiCollapsibleContent>
+      </ShCollapsibleTrigger>
+      <ShCollapsibleContent>
         <ul class="pl-2">
           <li v-for="link in item.links" :key="link.title">
             <NuxtLink
@@ -32,8 +32,8 @@
             </NuxtLink>
           </li>
         </ul>
-      </UiCollapsibleContent>
-    </UiCollapsible>
+      </ShCollapsibleContent>
+    </ShCollapsible>
   </template>
   <NuxtLink v-else :to="item.to" :target="item.target" class="flex w-full p-2">
     {{ item.title }}

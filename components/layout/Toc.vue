@@ -1,5 +1,5 @@
 <template>
-  <UiScrollArea
+  <ShScrollArea
     v-if="!isSmall"
     orientation="vertical"
     class="z-30 hidden h-[calc(100vh-6.5rem)] overflow-y-auto md:block lg:block"
@@ -36,25 +36,25 @@
       <div class="flex-grow" />
       <LayoutCarbonAds v-if="carbonAds.enable" />
     </div>
-  </UiScrollArea>
-  <UiCollapsible
+  </ShScrollArea>
+  <ShCollapsible
     v-else
     v-model:open="isOpen"
     class="block w-full text-sm lg:hidden"
     :class="{ 'border-b': border }"
   >
-    <UiCollapsibleTrigger class="flex w-full px-4 py-3 text-left font-medium">
+    <ShCollapsibleTrigger class="flex w-full px-4 py-3 text-left font-medium">
       {{ title }}
       <Icon
         name="lucide:chevron-right"
         class="ml-auto self-center transition-all"
         :class="[isOpen && 'rotate-90']"
       />
-    </UiCollapsibleTrigger>
-    <UiCollapsibleContent>
+    </ShCollapsibleTrigger>
+    <ShCollapsibleContent>
       <LayoutTocTree :links="toc.links" :level="0" class="mx-4 mb-3 border-l pl-4 text-sm" />
-    </UiCollapsibleContent>
-  </UiCollapsible>
+    </ShCollapsibleContent>
+  </ShCollapsible>
 </template>
 
 <script setup lang="ts">

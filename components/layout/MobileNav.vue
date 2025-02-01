@@ -1,21 +1,21 @@
 <template>
-  <UiSheet v-model:open="open">
-    <UiSheetTrigger as-child>
-      <UiButton
+  <ShSheet v-model:open="open">
+    <ShSheetTrigger as-child>
+      <ShButton
         variant="ghost"
         size="icon"
         class="md:hidden"
       >
         <Icon name="lucide:menu" size="18" />
-      </UiButton>
-    </UiSheetTrigger>
-    <UiSheetContent side="left" class="pr-0">
+      </ShButton>
+    </ShSheetTrigger>
+    <ShSheetContent side="left" class="pr-0">
       <LayoutHeaderLogo />
       <LayoutAside is-mobile />
-      <UiDialogTitle class="sr-only" />
-      <UiDialogDescription class="sr-only" />
-    </UiSheetContent>
-  </UiSheet>
+      <ShDialogTitle class="sr-only" />
+      <ShDialogDescription class="sr-only" />
+    </ShSheetContent>
+  </ShSheet>
 </template>
 
 <script setup lang="ts">

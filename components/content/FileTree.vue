@@ -1,5 +1,5 @@
 <template>
-  <UiCard
+  <ShCard
     class="relative overflow-hidden [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
   >
     <div v-if="title" class="flex items-center border-b p-3 font-mono text-sm">
@@ -10,7 +10,7 @@
     <div class="w-auto bg-muted/30 p-2">
       <FileTreeRoot :tree="parsedTree" :show-arrow :show-icon :level="0" />
     </div>
-  </UiCard>
+  </ShCard>
 </template>
 
 <script setup lang="ts">

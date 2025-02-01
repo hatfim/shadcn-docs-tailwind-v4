@@ -8,7 +8,7 @@
     >
       <template v-if="announcement.icon">
         <SmartIcon :name="announcement.icon" :size="16" />
-        <UiSeparator class="mx-2 h-4" orientation="vertical" />
+        <ShSeparator class="mx-2 h-4" orientation="vertical" />
       </template>
       <span class="sm:hidden">{{ announcement.title }}</span>
       <span class="hidden sm:inline">
@@ -31,11 +31,11 @@
         :to="action.to"
         :target="action.target"
       >
-        <UiButton :variant="action.variant">
+        <ShButton :variant="action.variant">
           <SmartIcon v-if="action.leftIcon" :name="action.leftIcon" class="mr-1" />
           {{ action.name }}
           <SmartIcon v-if="action.rightIcon" :name="action.rightIcon" class="ml-1" />
-        </UiButton>
+        </ShButton>
       </NuxtLink>
     </section>
   </section>

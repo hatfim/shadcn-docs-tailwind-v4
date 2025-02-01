@@ -9,10 +9,10 @@
       </p>
     </div>
     <div class="space-y-1.5">
-      <UiLabel>Color</UiLabel>
+      <ShLabel>Color</ShLabel>
       <div class="grid grid-cols-3 gap-2">
         <template v-for="color in allColors" :key="color">
-          <UiButton
+          <ShButton
             class="justify-start gap-2"
             variant="outline"
             :class="{ 'border-2 border-primary': theme === color }"
@@ -22,29 +22,29 @@
               <Icon v-if="theme === color" name="lucide:check" size="16" class="text-white" />
             </span>
             <span class="text-xs capitalize">{{ color }}</span>
-          </UiButton>
+          </ShButton>
         </template>
       </div>
     </div>
     <div class="space-y-1.5">
-      <UiLabel>Radius</UiLabel>
+      <ShLabel>Radius</ShLabel>
       <div class="grid grid-cols-5 gap-2">
         <template v-for="r in RADII" :key="r">
-          <UiButton
+          <ShButton
             class="justify-center gap-2"
             variant="outline"
             :class="{ 'border-2 border-primary': radius === r }"
             @click="setRadius(r)"
           >
             <span class="text-xs capitalize">{{ r }}</span>
-          </UiButton>
+          </ShButton>
         </template>
       </div>
     </div>
     <div v-if="darkModeToggle" class="space-y-1.5">
-      <UiLabel>Theme</UiLabel>
+      <ShLabel>Theme</ShLabel>
       <div class="grid grid-cols-3 gap-2">
-        <UiButton
+        <ShButton
           class="justify-center gap-2"
           variant="outline"
           :class="{ 'border-2 border-primary': colorMode.preference === 'light' }"
@@ -52,8 +52,8 @@
         >
           <Icon name="lucide:sun" size="16" />
           <span class="text-xs capitalize">Light</span>
-        </UiButton>
-        <UiButton
+        </ShButton>
+        <ShButton
           class="justify-center gap-2"
           variant="outline"
           :class="{ 'border-2 border-primary': colorMode.preference === 'dark' }"
@@ -61,8 +61,8 @@
         >
           <Icon name="lucide:moon" size="16" />
           <span class="text-xs capitalize">Dark</span>
-        </UiButton>
-        <UiButton
+        </ShButton>
+        <ShButton
           class="justify-center gap-2"
           variant="outline"
           :class="{ 'border-2 border-primary': colorMode.preference === 'system' }"
@@ -70,7 +70,7 @@
         >
           <Icon name="lucide:monitor" size="16" />
           <span class="text-xs capitalize">System</span>
-        </UiButton>
+        </ShButton>
       </div>
     </div>
   </div>

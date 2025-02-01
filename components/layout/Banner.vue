@@ -11,9 +11,9 @@
         <div class="text-sm">
           <MDC :value="content" class="flex items-center" />
         </div>
-        <UiButton v-if="showClose" variant="ghost" class="z-40 size-8 p-2" @click="open = false">
+        <ShButton v-if="showClose" variant="ghost" class="z-40 size-8 p-2" @click="open = false">
           <Icon name="lucide:x" />
-        </UiButton>
+        </ShButton>
         <div v-else />
       </div>
     </div>

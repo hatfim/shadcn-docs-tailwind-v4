@@ -14,18 +14,18 @@
         :to="badge.to"
         :target="badge.target"
       >
-        <UiBadge :variant="badge.variant || 'secondary'" :type="badge.type" class="gap-1 rounded-md">
+        <ShBadge :variant="badge.variant || 'secondary'" :type="badge.type" class="gap-1 rounded-md">
           {{ badge.value }}
           <SmartIcon v-if="badge.to || badge.icon" :size="12" :name="badge.icon || 'lucide:external-link'" />
-        </UiBadge>
+        </ShBadge>
       </NuxtLink>
     </div>
 
     <div v-if="authors" class="-mx-4 flex divide-x pt-4">
       <NuxtLink v-for="author in authors" :key="author.name" :to="author.to" :target="author.target" class="flex items-center gap-2 px-4">
-        <UiAvatar v-if="author.avatar" class="size-8">
-          <UiAvatarImage :src="author.avatar" :alt="author.name" />
-        </UiAvatar>
+        <ShAvatar v-if="author.avatar" class="size-8">
+          <ShAvatarImage :src="author.avatar" :alt="author.name" />
+        </ShAvatar>
         <div>
           <div class="text-sm font-semibold">
             {{ author.name }}

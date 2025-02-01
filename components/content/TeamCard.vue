@@ -1,10 +1,10 @@
 <template>
-  <UiCard>
-    <UiCardHeader>
+  <ShCard>
+    <ShCardHeader>
       <div class="flex flex-col gap-3" :class="{ 'text-center': center }">
-        <UiAvatar :class="{ 'mx-auto': center }">
-          <UiAvatarImage :src="avatar" :alt="name" />
-        </UiAvatar>
+        <ShAvatar :class="{ 'mx-auto': center }">
+          <ShAvatarImage :src="avatar" :alt="name" />
+        </ShAvatar>
         <div>
           <div class="text-lg font-bold">
             {{ name }}
@@ -19,8 +19,8 @@
           </NuxtLink>
         </div>
       </div>
-    </UiCardHeader>
-  </UiCard>
+    </ShCardHeader>
+  </ShCard>
 </template>
 
 <script setup lang="ts">

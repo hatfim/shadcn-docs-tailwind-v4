@@ -1,11 +1,11 @@
 <template>
   <MDC v-if="loadedCode" :value="md" class="[&:not(:first-child)]:mt-5" />
-  <UiAlert v-else variant="destructive">
-    <UiAlertTitle>Error</UiAlertTitle>
-    <UiAlertDescription>
+  <ShAlert v-else variant="destructive">
+    <ShAlertTitle>Error</ShAlertTitle>
+    <ShAlertDescription>
       Cannot load code: <ProseCodeInline>{{ file || url }}</ProseCodeInline>
-    </UiAlertDescription>
-  </UiAlert>
+    </ShAlertDescription>
+  </ShAlert>
 </template>
 
 <script setup lang="ts">

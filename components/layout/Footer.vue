@@ -9,10 +9,10 @@
         :to="link?.to"
         :target="link?.target"
       >
-        <UiButton variant="ghost" :size="link?.icon && !link?.title ? 'icon' : 'default'" class="flex gap-2">
+        <ShButton variant="ghost" :size="link?.icon && !link?.title ? 'icon' : 'default'" class="flex gap-2">
           <SmartIcon v-if="link?.icon" :name="link.icon" :size="20" />
           <span v-if="link?.title">{{ link.title }}</span>
-        </UiButton>
+        </ShButton>
       </NuxtLink>
     </div>
   </footer>

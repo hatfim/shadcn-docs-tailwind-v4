@@ -1,12 +1,12 @@
 <template>
-  <UiAccordion
+  <ShAccordion
     :type
     :collapsible
     :default-value="defaultValue"
     class="[&:not(:first-child)]:mt-5"
   >
     <slot />
-  </UiAccordion>
+  </ShAccordion>
 </template>
 
 <script setup lang="ts">

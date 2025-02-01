@@ -1,11 +1,11 @@
 <template>
-  <UiTabs
+  <ShTabs
     v-if="variant === 'separate'"
     v-model="activeTabIndex"
     class="[&:not(:first-child)]:mt-5"
   >
-    <UiTabsList>
-      <UiTabsTrigger
+    <ShTabsList>
+      <ShTabsTrigger
         v-for="(slot, i) in $slots.default?.() ?? []"
         :key="`${i}${label(slot.props)}`"
         :value="i"
@@ -16,8 +16,8 @@
           class="mr-1.5 self-center"
         />
         {{ label(slot.props) }}
-      </UiTabsTrigger>
-    </UiTabsList>
+      </ShTabsTrigger>
+    </ShTabsList>
 
     <div
       v-for="(slot, i) in $slots.default?.() ?? []"
@@ -27,16 +27,16 @@
     >
       <component :is="slot" />
     </div>
-  </UiTabs>
+  </ShTabs>
 
-  <UiTabs
+  <ShTabs
     v-else-if="variant === 'line'"
     v-model="activeTabIndex"
     class="relative mr-auto w-full [&:not(:first-child)]:mt-5"
   >
     <div class="flex items-center justify-between pb-3">
-      <UiTabsList class="h-9 w-full justify-start rounded-none border-b bg-transparent p-0">
-        <UiTabsTrigger
+      <ShTabsList class="h-9 w-full justify-start rounded-none border-b bg-transparent p-0">
+        <ShTabsTrigger
           v-for="(slot, i) in $slots.default?.() ?? []"
           :key="`${i}${label(slot.props)}`"
           :value="i"
@@ -48,8 +48,8 @@
             class="mr-1.5 self-center"
           />
           {{ label(slot.props) }}
-        </UiTabsTrigger>
-      </UiTabsList>
+        </ShTabsTrigger>
+      </ShTabsList>
     </div>
 
     <div
@@ -60,14 +60,14 @@
     >
       <component :is="slot" />
     </div>
-  </UiTabs>
+  </ShTabs>
 
-  <UiCard
+  <ShCard
     v-else-if="variant === 'card'"
     class="[&:not(:first-child)]:mt-5"
     :class="[inStack && 'mb-0 rounded-none border-none shadow-none']"
   >
-    <UiScrollArea>
+    <ShScrollArea>
       <div class="relative flex overflow-x-auto border-b p-0.5 text-sm">
         <div class="flex p-1">
           <div
@@ -93,7 +93,7 @@
         />
       </div>
       <ScrollBar orientation="horizontal" />
-    </UiScrollArea>
+    </ShScrollArea>
 
     <div
       v-for="(slot, i) in $slots.default?.() ?? []"
@@ -105,12 +105,12 @@
     >
       <component :is="slot" :in-group="true" />
     </div>
-  </UiCard>
+  </ShCard>
 
   <div v-else-if="variant === 'combobox'">
-    <UiPopover v-model:open="dropDownOpen">
-      <UiPopoverTrigger as-child>
-        <UiButton
+    <ShPopover v-model:open="dropDownOpen">
+      <ShPopoverTrigger as-child>
+        <ShButton
           variant="outline"
           role="combobox"
           :aria-expanded="dropDownOpen"
@@ -127,15 +127,15 @@
             </span>
           </div>
           <Icon name="lucide:chevrons-up-down" />
-        </UiButton>
-      </UiPopoverTrigger>
-      <UiPopoverContent class="w-[200px] p-0">
-        <UiCommand>
-          <UiCommandInput v-if="!disableSearch" class="h-9" :placeholder="searchPlaceholder" />
-          <UiCommandEmpty>{{ searchEmpty }}</UiCommandEmpty>
-          <UiCommandList>
-            <UiCommandGroup>
-              <UiCommandItem
+        </ShButton>
+      </ShPopoverTrigger>
+      <ShPopoverContent class="w-[200px] p-0">
+        <ShCommand>
+          <ShCommandInput v-if="!disableSearch" class="h-9" :placeholder="searchPlaceholder" />
+          <ShCommandEmpty>{{ searchEmpty }}</ShCommandEmpty>
+          <ShCommandList>
+            <ShCommandGroup>
+              <ShCommandItem
                 v-for="(slot, i) in $slots.default?.() ?? []"
                 :key="`${i}${label(slot.props)}`"
                 :value="label(slot.props)"
@@ -157,12 +157,12 @@
                     activeTabIndex === i ? 'opacity-100' : 'opacity-0',
                   )"
                 />
-              </UiCommandItem>
-            </UiCommandGroup>
-          </UiCommandList>
-        </UiCommand>
-      </UiPopoverContent>
-    </UiPopover>
+              </ShCommandItem>
+            </ShCommandGroup>
+          </ShCommandList>
+        </ShCommand>
+      </ShPopoverContent>
+    </ShPopover>
 
     <div
       v-for="(slot, i) in $slots.default?.() ?? []"

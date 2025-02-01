@@ -1,14 +1,14 @@
 <template>
-  <UiAccordionItem :value="value ?? autoValue">
-    <UiAccordionTrigger>
+  <ShAccordionItem :value="value ?? autoValue">
+    <ShAccordionTrigger>
       <ContentSlot :use="$slots.title" unwrap="p" />
       {{ title }}
-    </UiAccordionTrigger>
-    <UiAccordionContent>
+    </ShAccordionTrigger>
+    <ShAccordionContent>
       <ContentSlot :use="$slots.content" unwrap="p" />
       {{ content }}
-    </UiAccordionContent>
-  </UiAccordionItem>
+    </ShAccordionContent>
+  </ShAccordionItem>
 </template>
 
 <script setup lang="ts">

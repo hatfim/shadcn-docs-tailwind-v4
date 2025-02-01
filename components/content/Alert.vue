@@ -1,5 +1,5 @@
 <template>
-  <UiAlert
+  <ShAlert
     class="transition-all [&:not(:first-child)]:mt-5"
     :class="[
       typeTwClass[type],
@@ -9,10 +9,10 @@
     @click="alertClick"
   >
     <SmartIcon v-if="icon && title" :name="icon" :size="16" />
-    <UiAlertTitle v-if="title" class="font-semibold">
+    <ShAlertTitle v-if="title" class="font-semibold">
       {{ title }}
-    </UiAlertTitle>
-    <UiAlertDescription>
+    </ShAlertTitle>
+    <ShAlertDescription>
       <div class="flex flex-row gap-2">
         <SmartIcon v-if="icon && !title" :name="icon" :size="16" class="mb-[2px] min-w-5 self-center" />
         <span class="w-full" :class="[to && 'pr-3']">
@@ -20,8 +20,8 @@
         </span>
       </div>
       <SmartIcon v-if="to && showLinkIcon" name="lucide:arrow-up-right" class="absolute right-4 top-4" />
-    </UiAlertDescription>
-  </UiAlert>
+    </ShAlertDescription>
+  </ShAlert>
 </template>
 
 <script setup lang="ts">

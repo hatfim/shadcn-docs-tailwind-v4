@@ -1,5 +1,5 @@
 <template>
-  <UiCard
+  <ShCard
     class="relative overflow-hidden [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
     :class="[
       inGroup && 'mb-0 rounded-t-none border-none shadow-none',
@@ -16,7 +16,7 @@
       <CodeCopy :code />
     </span>
     <div class="bg-muted/30">
-      <UiScrollArea :style="[parsedMeta.has('height') && `height: ${parsedMeta.get('height')}px`]">
+      <ShScrollArea :style="[parsedMeta.has('height') && `height: ${parsedMeta.get('height')}px`]">
         <div
           class="overflow-x-auto py-3 text-sm"
           :class="[
@@ -28,9 +28,9 @@
           <slot />
         </div>
         <ScrollBar orientation="horizontal" />
-      </UiScrollArea>
+      </ShScrollArea>
     </div>
-  </UiCard>
+  </ShCard>
 </template>
 
 <script setup lang="ts">

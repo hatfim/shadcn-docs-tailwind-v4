@@ -1,8 +1,8 @@
 <template>
-  <UiBreadcrumb>
-    <UiBreadcrumbList>
+  <ShBreadcrumb>
+    <ShBreadcrumbList>
       <template v-for="(breadcrumb, index) in breadcrumbs" :key="breadcrumb.title">
-        <UiBreadcrumbItem>
+        <ShBreadcrumbItem>
           <NuxtLink
             :href="index === 0 ? undefined : breadcrumb.href"
             class="transition-colors hover:text-foreground"
@@ -10,11 +10,11 @@
           >
             {{ breadcrumb.title }}
           </NuxtLink>
-        </UiBreadcrumbItem>
-        <UiBreadcrumbSeparator v-if="index !== breadcrumbs.length - 1" />
+        </ShBreadcrumbItem>
+        <ShBreadcrumbSeparator v-if="index !== breadcrumbs.length - 1" />
       </template>
-    </UiBreadcrumbList>
-  </UiBreadcrumb>
+    </ShBreadcrumbList>
+  </ShBreadcrumb>
 </template>
 
 <script setup lang="ts">

@@ -15,7 +15,7 @@
       >
         <template v-if="announcement.icon">
           <SmartIcon :name="announcement.icon" :size="16" />
-          <UiSeparator class="mx-2 h-4" orientation="vertical" />
+          <ShSeparator class="mx-2 h-4" orientation="vertical" />
         </template>
         <span class="underline-offset-4 hover:underline">{{ announcement.title }}</span>
         <Icon name="lucide:arrow-right" class="ml-1 size-4" />
@@ -35,11 +35,11 @@
           :to="action.to"
           :target="action.target"
         >
-          <UiButton :variant="action.variant" size="sm">
+          <ShButton :variant="action.variant" size="sm">
             <SmartIcon v-if="action.leftIcon" :name="action.leftIcon" class="mr-1" />
             {{ action.name }}
             <SmartIcon v-if="action.rightIcon" :name="action.rightIcon" class="ml-1" />
-          </UiButton>
+          </ShButton>
         </NuxtLink>
       </div>
     </section>

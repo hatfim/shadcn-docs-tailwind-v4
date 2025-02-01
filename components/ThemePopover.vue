@@ -1,17 +1,17 @@
 <template>
-  <UiPopover>
-    <UiPopoverTrigger as-child>
-      <UiButton variant="ghost" size="icon">
+  <ShPopover>
+    <ShPopoverTrigger as-child>
+      <ShButton variant="ghost" size="icon">
         <Icon name="lucide:paintbrush" size="16" />
-      </UiButton>
-    </UiPopoverTrigger>
-    <UiPopoverContent
+      </ShButton>
+    </ShPopoverTrigger>
+    <ShPopoverContent
       class="w-[23rem]"
       :align="breakpoints.isGreaterOrEqual('md') ? 'end' : 'center'"
     >
       <ThemeCustomizer />
-    </UiPopoverContent>
-  </UiPopover>
+    </ShPopoverContent>
+  </ShPopover>
 </template>
 
 <script setup lang="ts">
