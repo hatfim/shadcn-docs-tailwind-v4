@@ -75,7 +75,7 @@
             :key="`${i}${label(slot.props)}`"
             :value="label(slot.props)"
             class="flex cursor-pointer rounded-md px-3 py-1.5 text-muted-foreground transition-all duration-75"
-            :class="[activeTabIndex === i && 'bg-muted text-primary']"
+            :class="[activeTabIndex === i && 'bg-muted text-main']"
             @mousedown.left="activeTabIndex = i"
           >
             <SmartIcon

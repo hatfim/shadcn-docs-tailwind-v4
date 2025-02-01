@@ -1,5 +1,5 @@
 <template>
-  <NuxtLoadingIndicator :color="false" class="z-100 bg-primary/80" />
+  <NuxtLoadingIndicator :color="false" class="z-100 bg-main/80" />
   <LayoutBanner v-if="config.banner.enable" />
   <LayoutHeader />
 

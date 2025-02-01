@@ -6,9 +6,9 @@
       <li v-for="link in navigation" :key="link.id">
         <NuxtLink
           :to="link.redirect ?? link._path"
-          class="flex h-8 items-center gap-2 rounded-md p-2 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+          class="flex h-8 items-center gap-2 rounded-md p-2 text-sm text-foreground/80 hover:bg-muted hover:text-main"
           :class="[
-            path.startsWith(link._path) && 'bg-muted !text-primary',
+            path.startsWith(link._path) && 'bg-muted !text-main',
           ]"
         >
           <SmartIcon

@@ -13,7 +13,7 @@
       </template>
       <template v-else>
         <button
-          class="flex w-full cursor-pointer items-center gap-2 rounded-md p-2 text-left text-sm font-medium text-foreground/80 hover:bg-muted hover:text-primary"
+          class="flex w-full cursor-pointer items-center gap-2 rounded-md p-2 text-left text-sm font-medium text-foreground/80 hover:bg-muted hover:text-main"
           :class="[link.navTruncate !== false && 'h-8']"
           @click="isOpen = !isOpen"
         >
@@ -40,9 +40,9 @@
     <NuxtLink
       v-else
       :to="link._path"
-      class="flex items-center gap-2 rounded-md p-2 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+      class="flex items-center gap-2 rounded-md p-2 text-sm text-foreground/80 hover:bg-muted hover:text-main"
       :class="[
-        isActive && 'bg-muted !text-primary',
+        isActive && 'bg-muted !text-main',
         link.navTruncate !== false && 'h-8',
       ]"
     >
